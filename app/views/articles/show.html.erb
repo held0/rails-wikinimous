@@ -1,0 +1,16 @@
+<div class="border-bottom bg-light d-flex justify-content-between align-items-center">
+  <h4 class="p-3 fw-lighter">Wikinimous</h4>
+  <a class="p-3" href="/articles/new">New Article</a>
+</div>
+<div class="container my-5">
+  <div class="d-flex align-items-center gap-2">
+    <h2><%= @article.title %></h2>
+    <a href="<%= edit_article_path(@article) %>"><i class="fa fa-pencil fs-4"></i></a>
+    <a href="<%= article_path(@article) %>" data-confirm="Are you sure?" rel="nofollow" data-method="delete">
+      <i class="fa-solid fa-trash fs-4"></i>
+    </a>
+  </div>
+  <hr>
+  <p><%= @article.content %></p>
+  <br>
+</div>
